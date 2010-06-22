@@ -54,6 +54,7 @@ module MCollective
             def do_pkg_action(package, action)
                 begin
                     require 'puppet'
+                    require 'fileutils'
 
                     if Puppet.version =~ /0.24/
                         Puppet::Type.type(:package).clear
